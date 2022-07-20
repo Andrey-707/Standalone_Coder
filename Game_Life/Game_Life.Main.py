@@ -17,7 +17,7 @@ TILE = 5
 W, H = WIDTH // TILE, HEIGHT // TILE
 FPS = 15
 game = True
-start_time = time.time()
+start_time = time()
 end_time = 53
 
 pg.init()
@@ -106,10 +106,12 @@ def play_sound(sound):
 play_sound(sound_track)
 
 while game:
-    current_time = int(time.time() - start_time)
+    # check timer
+    current_time = int(time() - start_time)
     if current_time is end_time:
         game = False
     
+    # draw background
     surface.blit(img, (0, 0))
 
     # draw life
