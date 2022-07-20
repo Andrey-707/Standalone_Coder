@@ -108,7 +108,7 @@ play_sound(sound_track)
 while game:
     # check timer
     current_time = int(time() - start_time)
-    if current_time is end_time:
+    if current_time == end_time:
         game = False
     
     # draw background
